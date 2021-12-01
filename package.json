@@ -1,0 +1,29 @@
+{
+  "name": "eliasfl-sorting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently --kill-others npm:dev-*",
+    "dev-tailwind": "tailwindcss -o tailwind.css --watch",
+    "dev-live-server": "live-server --no-browser",
+    "build": "tailwindcss -o tailwind.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INDAPlus21/eliasfl-sorting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/INDAPlus21/eliasfl-sorting/issues"
+  },
+  "homepage": "https://github.com/INDAPlus21/eliasfl-sorting#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concurrently": "^6.4.0",
+    "live-server": "^1.2.1",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^2.2.19"
+  }
+}
