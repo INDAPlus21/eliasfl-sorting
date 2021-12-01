@@ -661,6 +661,11 @@ video {
   position: static;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -671,6 +676,11 @@ video {
 
 .p-5 {
   padding: 1.25rem;
+}
+
+.text-indigo-500 {
+  --tw-text-opacity: 1;
+  color: rgba(99, 102, 241, var(--tw-text-opacity));
 }
 
 .ring {
