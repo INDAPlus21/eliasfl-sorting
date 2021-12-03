@@ -1,17 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html class="h-full">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Sorting visualized</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="main.css" />
     <script src="d3.js"></script>
   </head>
-  <body class="container mx-auto p-5">
-    <div>Lorem ipsum dolor.</div>
+  <body class="container mx-auto p-5 flex flex-col gap-4 h-full min-h-screen">
+    <div>
+      <label for="bars">Number of values: <span id="bars_val"></span></label>
+      <input
+        name="bars"
+        id="bars"
+        type="range"
+        min="3"
+        max="20"
+        step="1"
+        value="10"
+        class="w-full menubtn"
+      />
+      <label for="speed">Sorting delay: <span id="speed_val"></span> ms</label>
+      <input
+        name="speed"
+        id="speed"
+        type="range"
+        min="20"
+        max="2000"
+        step="20"
+        value="500"
+        class="w-full menubtn"
+      />
+    </div>
 
-    <div class="viz text-indigo-500"></div>
+    <div class="flex gap-3">
+      <button id="randomize" class="btn menubtn bg-indigo-500">
+        Randomize
+      </button>
+      <button id="insertion" class="btn menubtn">Insertion sort</button>
+      <button id="pancake" class="btn menubtn">Pancake sort</button>
+      <button id="stop" class="btn bg-red-500">Reset</button>
+    </div>
+
+    <svg
+      id="viz"
+      class="h-full w-auto mx-auto text-indigo-500"
+      preserveAspectRatio="xMidYMid meet"
+    ></svg>
+
+    <div id="summary"></div>
 
     <script src="index.js"></script>
   </body>

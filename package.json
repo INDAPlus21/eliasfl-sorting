@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently --kill-others npm:dev-*",
-    "dev-tailwind": "tailwindcss -o tailwind.css --watch",
-    "dev-live-server": "live-server --no-browser",
+    "dev-tailwind": "tailwindcss -i tailwind.css -o main.css --watch",
+    "dev-live-server": "live-server --no-browser --no-css-inject --ignore=node_modules/**",
     "build": "tailwindcss -o tailwind.css --minify"
   },
   "repository": {
